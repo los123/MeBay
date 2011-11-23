@@ -1,0 +1,36 @@
+<html>
+<head>
+<title><%= @ad.name %> </title>
+</head>
+<body>
+
+<p>
+<b>Name:</b><%= @ad.name %>
+</p>
+
+<p>
+  <b>Description:</b><%= @ad.description %>
+</p>
+
+<p>
+  <b>Price:</b><%= @ad.price %>
+</p>
+
+<p>
+  <b>Seller Id:</b><%= @ad.seller_id %>
+</p>
+
+<p>
+  <b>Email:</b><%= @ad.email %>
+</p>
+
+<p>
+  <img src="<%= @ad.img_url %>" />
+</p>
+
+<font size="3" color="red"><b><i><%= link_to "Edit your post", ad_path %></b></i></font>
+
+<a href="/ads/<%= @ad.id %>/edit">Edit</a>
+
+</body>
+</html>

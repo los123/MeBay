@@ -1,0 +1,14 @@
+<h1>All Ads</h1>
+
+<b>To create new ad</b> <a href="/ads/new">click here</a>
+
+<h2><b><p>Current Listings</p></b></h2>
+
+<ul>
+<% for ad in @ads %>
+  <li> <a href="/ads/<%=ad.id %>"><%= ad.name %></a>
+  [<a href = "/ads/<%= ad.id %>/delete">Delete</a>]</li>
+  <% end %>
+</ul>
+
+	

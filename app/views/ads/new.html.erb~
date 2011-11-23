@@ -1,0 +1,15 @@
+<h1>Fill in the form in order to place your ad</h1>
+
+          <%= form_for(@ad,:url=>{:action=>'create'}) do |f| %>
+	  <p><b>Name</b><br /><%= f.text_field :name %></p>
+	  <p><b>Description</b><br /><%= f.text_area :description, rows: 10 %></p> 
+	  <p><b>Price</b><br /><%= f.text_field :price %></p>
+	  <p><b>Seller</b><br /><%= f.text_field :seller_id %></p>
+	  <p><b>E-mail</b><br /><%= f.text_field :email %></p>
+	  <p><b>Img url</b><br /><%= f.text_field :img_url %></p> <p><%= f.submit "Create" %></p>
+	  <% end %>
+
+
+<!-- COMMENTS -->                   
+<!-- :description - all those things are symbols, but they also correspond to the database column names -->
+<!-- "Create" in img url line - the word that will appear on the bottom of the form that users will press to create an ad -->
